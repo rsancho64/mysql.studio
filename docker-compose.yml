@@ -1,0 +1,29 @@
+version: '3.8'
+
+services:
+
+  mysql:
+    # Use root/example as user/passw credentials  
+    image: mysql:latest
+    restart: always
+    container_name: mycontainer
+    environment:
+      - MYSQL_DATABASE=mydb
+      - MYSQL_ROOT_PASSWORD=example
+    ports:
+      - '3306:3306'
+    volumes:
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql
+
+    # NOTE: use of "mysql_native_password" is not recommended: https://dev.mysql.com/doc/refman/8.0/en/upgrading-from-previous-series.html#upgrade-caching-sha2-password
+    # (this is just an example, not intended to be a production configuration)
+    #command: --default-authentication-plugin=mysql_native_password
+    #command: --default-authentication-plugin=caching_sha2_password 
+    
+  # - [x] DBeaver (dbeaver-c)    
+  
+  # adminer:
+  #   image: adminer
+  #   restart: always
+  #   ports:
+  #     - 8080:8080

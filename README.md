@@ -1,5 +1,6 @@
-# mysql en ubuntu
+# mysql.studio ... dockerizando ... vagrantizando ...
 
+## 1 mysql en ubuntu
 
 [**tuto**](https://www.digitalocean.com/community/tutorials/how-to-install-mysql-on-ubuntu-20-04-es) https://www.digitalocean.com/community/tutorials/how-to-install-mysql-on-ubuntu-20-04-es
 
@@ -96,7 +97,7 @@ then, NOW:
 $ sudo mysql
 [sudo] contraseña para ray: 
 ERROR 1045 (28000): Access denied for user 'root'@'localhost' (using password: NO)
-$ mysql -u root -p
+$ sudo mysql -u root -p
 Enter password: P4t***_*0**s
 c
 Nuevo usuario con contraseña segura:
@@ -126,8 +127,7 @@ mysql> show privileges;
 Mas sobre privilegios convenientes e interesantes -y roles- en 
 [**esta receta**](https://dev.mysql.com/blog-archive/how-to-grant-privileges-to-users-in-mysql-80/)
 
-
-## utileria
+### utileria
 
 ```bash
 [sudo] systemctl status mysql.service
@@ -135,4 +135,19 @@ Mas sobre privilegios convenientes e interesantes -y roles- en
 [sudo] systemctl start mysql.service
 [sudo] systemctl restart mysql.service
 ```
+## 2 mysql en docker
+
+Tuto en el [**video**](https://www.youtube.com/watch?v=lhijcwwvrWo) 
+
+Official: [https://hub.docker.com/_/mysql](https://hub.docker.com/_/mysql)
+... via docker compose:
+
+`touch docker-compose.yml`
+
+### cliente DBeaver: 
+    
+    ++connection; set: driver-properties:allowPublicRetrieval: TRUE
+
+
+
 

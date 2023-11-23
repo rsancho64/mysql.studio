@@ -148,6 +148,17 @@ Official: [https://hub.docker.com/_/mysql](https://hub.docker.com/_/mysql)
     
     ++connection; set: driver-properties:allowPublicRetrieval: TRUE
 
+## 3 Vagrant en Ubuntu
 
+- [!!] https://www.redeszone.net/tutoriales/servidores/vagrant-instalacion-configuracion-ejemplos/
+>(...) de Vagrant es su capacidad para utilizar diferentes proveedores de virtualización, como VirtualBox, VMware y Hyper-V. Estos proveedores ofrecen diferentes características y optimizaciones de rendimiento, lo que permite a desarrolladores elegir ante casos específicos. **Además**, Vagrant tambien "virtualiza ligero" utilizando tecnologías como **Docker** y **LXC**, lo que permite inicio y apagado más rápidos de las máquinas
+
+### 3.1 LXC: linux containers
+
+- [ ] [**que son**](https://www.qindel.com/que-son-los-contenedores-linux-o-lxc-linux-containers/)
+
+## 4 mysql en vagrant
+
+- [ ] Connecting to Vagrant VM MySQL database from host: [**this gist**](https://gist.github.com/rmatil/8d21620c11039a442964)
 
 
